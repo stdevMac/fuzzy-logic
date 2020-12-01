@@ -1,67 +1,65 @@
-# Proyecto de Simulacion
+# Proyecto de Simulación
 
-## Logica Difusa
+## Lógica Difusa
 
 ## Marcos Antonio Maceo Reyes, Grupo 2
 
-## Principales ideas seguidas para la implementacion del Sistema
+## Principales ideas seguidas para la implementación del sistema 
 
-Para la implementacion del sistema difusa nos basamos en varias clases y archivos organizados de forma tal que se 
+Para la implementación del sistema difusa nos basamos en varias clases y archivos organizados de forma tal que se 
 agruparan las funcionalidades de nuestro sistema de inferencia difusa. 
 
-Se definieron los operadores `Max`, `Min`, `Or` y `And` ademas para la inferencia de cada regla se implementaron los 
+Se definieron los operadores `Max`, `Min`, `Or` y `And` además para la inferencia de cada regla se implementaron los 
 metodos `Mamdani` y `Larsen`.
 
 Se definieron las siguientes clases para la solucion del sistema de inferencia difuso:
 
-- `LinguisticVar`: Defines las variables linguisticas.
-- `Rule`: Define las reglas planteadas como guias del problema. Esta compuesta por un Antecedente y un Precedente.
-- `Antecedent`: Define la parte izquierda de la implicacion de las reglas definidas anteriormente.
-- `Consequence`: Representa la parte derecha de la implicacion de las reglas defindas.
+- `LinguisticVar`: Defines las variables lingüísticas.
+- `Rule`: Define las reglas planteadas como guías del problema. Esta compuesta por un Antecedente y un Precedente.
+- `Antecedent`: Define la parte izquierda de la implicación de las reglas definidas anteriormente.
+- `Consequence`: Representa la parte derecha de la implicación de las reglas defindas.
 - `FuzzySet`: Representa un conjunto difuso.
 
-Se implemento ademas una clase `FuzzyInferenceSystem` que representa el sistema de inferencia difusa. Este implementa 
-como se dijo anteriormente `Mamdani` y `Larsen`, ademas de los metodos de desdifusificacion `Centroide`, `Biseccion` y 
-`Media de Maximos`.
+Se implemento además una clase `FuzzyInferenceSystem` que representa el sistema de inferencia difusa. Este implementa 
+como se dijo anteriormente `Mamdani` y `Larsen`, además de los métodos de desdifusificación `Centroide`, `Bisección` y 
+`Media de Máximos`.
 
 ## Propuesta del Problema
 
-Las emisiones nocivas que provienen de los vehículos representan una de las principales
-fuentes de contaminación. El exceso de agentes contaminantes en la atmósfera es uno de los
-mayores problemas a los que nos enfrentamos en la actualidad. En este trabajo se estudia
-como representar el comportamiento de varios conductores de acuerdo a los estilos de
-conducción (ecológica, normal, agresiva) mediante lógica difusa,
-para evaluar la eficiencia energética en un vehículo.
+Las emisiones nocivas que provienen de los vehículos representan una de las principales fuentes de contaminación. El 
+exceso de agentes contaminantes en la atmósfera es uno de los mayores problemas a los que nos enfrentamos en la 
+actualidad. En este trabajo se estudia como representar el comportamiento de varios conductores de acuerdo a los 
+estilos de conducción (ecológica, agresiva) mediante lógica difusa, para evaluar la eficiencia energética en un vehículo.
 
 ## Variables y funciones de inferencia del problema propuesto
 
-`Aceleracion` La aceleracion se clasifica en positiva y negativa.
+`Aceleración` La aceleración se clasifica en positiva y negativa.
 `Consumo` El consumo de combustible se clasifica en alto y bajo.
-`Eficiencia` Esta se clasifica en Alta o Baja.
+`Eficiencia` Esta se clasifica en alta o baja.
 
-Todas las variables antes linguisticas antes descritas se representan mediante un conjunto 
-difuso. Las funciones de pertenencia usadas son triangulares  tiene como objetivo brindar un 
-enfoque lo mas simplificado posible del problema. 
+Todas las variables linguisticas antes descritas se representan mediante un conjunto difuso. Las funciones de 
+pertenencia usadas son triangulares, las cuales tienen como objetivo brindar un enfoque lo mas simplificado posible del 
+problema. 
 
 ## Reglas del problema
 
-Las reglas definidas sobre el problema para aplicar posteriormente los algoritmos de logica difusa
-son las siguientes, basadas en las variables definidas anteriormente:
+Las reglas definidas a continuación represetan al problema,las cuales seran utilizadas posteriormente en algoritmos 
+de logica difusa, estas se encuentran definidas en base a las basadas en las variables definidas anteriormente:
 
 1. Si el consumo es bajo => la eficiencia es alta
 2. Si el consumo es alta => la eficiencia es baja
-3. Si la aceleracion es negativa y el consumo es bajo => eficiencia alta
-4. Si la aceleracion es positiva y el consumo es alto => eficiencia baja
+3. Si la aceleración es negativa y el consumo es bajo => eficiencia alta
+4. Si la aceleración es positiva y el consumo es alto => eficiencia baja
 
 
 ## Consideraciones obtenidas
 
-Para validar las implementacion y la respectiva solucion aplicando los algoritmos de logica difusa, se realizaron 
-varios ejemplos, donde se puede observar un nivel de aceptacion aceptable. 
+Para validar las implementación y la respectiva solución aplicando los algoritmos de lógica difusa, se realizaron 
+varios ejemplos, donde se puede observar un nivel de aceptación aceptable. 
 
-Basandonos en las variables definidas, tomamos como ejemplos conductores que fueran estilos de conduccion ecologicas, es
-decir que mantiviera bajos niveles de aceleracion y consumo de combustible. Efectivamente el modelo nos brindo una 
-solucion que cumplia con ser un condutor eficiente.
+Basándonos en las variables definidas, tomamos como ejemplos conductores que tienen estilos de conducción ecológicas, es
+decir que mantuviera bajos niveles de aceleracion y consumo de combustible. Efectivamente el modelo nos brindo una 
+solución que cumplía con ser un condutor eficiente.
 
-Aproximadamente lo mismo paso con otros ejemplos que usamos, exceptuando las condiciones fronteras, que era dificil 
-definir cuando un conductor era ecologico o agresivo.
+Aproximadamente lo mismo paso con otros ejemplos que utilizamos, exceptuando las condiciones fronteras, que era díficil 
+definir cuando un conductor era ecológico o agresivo.
